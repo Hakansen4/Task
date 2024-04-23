@@ -1,0 +1,14 @@
+Module
+  name: task_second
+  description: Second Task
+  author: Otland for the Win
+  website: -
+  version: 1
+
+  autoload: true
+  autoload-priority: 1000
+  sandboxed: true
+  dependencies: [ game_interface ]
+  scripts: [ task_second ]
+  @onLoad: init()
+  @onUnload: terminate()
