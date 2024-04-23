@@ -1,0 +1,11 @@
+Module
+  name: game_professions
+  description: Professions Window
+  author: baxnie, edubart
+  website: https://github.com/edubart/otclient
+  sandboxed: true
+  scripts: [ professions ]
+  @onLoad: init()
+  @onUnload: terminate()
+  dependencies:
+    - game_interface

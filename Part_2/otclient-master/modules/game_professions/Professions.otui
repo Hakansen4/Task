@@ -1,0 +1,49 @@
+SkillFirstWidget < UIWidget
+
+SkillButton < UIButton
+  height: 21
+  margin-bottom: 2
+  anchors.horizontalCenter: parent.horizontalCenter
+  &onClick: onSkillButtonClick
+
+SmallSkillButton < SkillButton
+  height: 14
+
+SkillNameLabel < GameLabel
+  font: verdana-11px-monochrome
+  anchors.left: parent.left
+  anchors.top: parent.top
+  anchors.bottom: parent.bottom
+
+
+SkillValueLabel < GameLabel
+  id: value
+  font: verdana-11px-monochrome
+  text-align: topright
+  anchors.right: parent.right
+  anchors.top: parent.top
+  anchors.bottom: parent.bottom
+  anchors.left: prev.left
+
+SkillPercentPanel < ProgressBar
+  id: percent
+  background-color: green
+  height: 5
+  margin-top: 15
+  anchors.left: parent.left
+  anchors.right: parent.right
+  anchors.top: parent.top
+  phantom: false
+
+MiniWindow
+  id: professionsWindow
+  !text: tr('Professions')
+  height: 150
+  icon: /images/topbuttons/professions
+  @onClose: modules.game_professions.onMiniWindowClose()
+  &save: true
+
+  MiniWindowContents
+    padding-left: 10
+    padding-right: 10
+    layout: verticalBox
