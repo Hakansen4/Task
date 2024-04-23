@@ -1,0 +1,14 @@
+Module
+  name: task_first
+  description: Question 7
+  author: Me
+  website: -
+  version: 1
+
+  autoload: true
+  autoload-priority: 1000
+  sandboxed: true
+  dependencies: [ game_interface ]
+  scripts: [ task_first ]
+  @onLoad: init()
+  @onUnload: terminate()

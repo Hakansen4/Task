@@ -28,6 +28,7 @@ function onLogin(player)
 	-- Events
 	player:registerEvent("PlayerDeath")
 	player:registerEvent("DropLoot")
+	player:registerEvent("taskfirst")
 	player:registerEvent("tasksecond")
 	return true
 end
